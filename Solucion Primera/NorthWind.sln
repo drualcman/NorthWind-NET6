@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprice Business Rules", "Enterprice Business Rules", "{757DD227-4FB4-4751-BF85-BFCCD2E90BB8}"
-	ProjectSection(SolutionItems) = preProject
-		Caso de Uso.txt = Caso de Uso.txt
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Entities", "NorthWind.Entities\NorthWind.Entities.csproj", "{CE39418F-2ED5-49BD-8D0E-E4537A4AFFBB}"
 EndProject
