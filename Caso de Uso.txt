@@ -20,7 +20,7 @@ Flujo primario:
 1. El usuario envia la solicitud "Crear orden de compra" con los datos de entrada.
 2. El sistema valida los datos.
 3. El sistema registra la accion "inicio de creacion de orden de compra" con fines de auditoria
-4. El sistema registra la orden de ocmpra.
+4. El sistema registra la orden de compra.
 5. El sistema registra la accion "Orden de compra <numero de orden> creada." con fines de auditoria.
 6. Cuando el numero de productos de la orden de compra sea mayor que 3, el sistema iniciara el proceso de envio de correo de notificacion de "Orden especial creada".
 7. El sistema confirma que su solicitud ha sido procesada notificandole el numero de la orden creada.
