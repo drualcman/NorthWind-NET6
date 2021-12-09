@@ -6,15 +6,15 @@ Como usuario del sistema deseo crear una orden de compra para solicitar producto
 Caso de uso: Crear orden de compra.
 
 Datos de entrada:
-	Identificador del cliente
-	Direccion de envio:
-	Ciudad de envio
-	Pais de envio
-	Codigo postal de envio
-	Lista de productos incluyendo:
-		Identificadoe del producto
-		Precio
-		Cantidad
+-	Identificador del cliente
+-	Direccion de envio:
+-	Ciudad de envio
+-	Pais de envio
+-	Codigo postal de envio
+-	Lista de productos incluyendo:
+--		Identificadoe del producto
+--		Precio
+--		Cantidad
 
 Flujo primario:
 1. El usuario envia la solicitud "Crear orden de compra" con los datos de entrada.
