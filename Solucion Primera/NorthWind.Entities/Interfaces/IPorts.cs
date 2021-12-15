@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NorthWind.Entities.Ports
+namespace NorthWind.Entities.Interfaces
 {
     /// <summary>
     /// Puerto de entrada de datos
@@ -15,9 +15,9 @@ namespace NorthWind.Entities.Ports
         /// <summary>
         /// Manejar los datos de entrada
         /// </summary>
-        /// <param name="dtp"></param>
+        /// <param name="dto"></param>
         /// <returns></returns>
-        ValueTask Handle(T dtp);
+        ValueTask Handle(T dto);
     }
 
     /// <summary>
