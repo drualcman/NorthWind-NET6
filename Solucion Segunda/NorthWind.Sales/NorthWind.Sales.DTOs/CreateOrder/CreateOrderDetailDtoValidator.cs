@@ -25,13 +25,13 @@ namespace NorthWind.Sales.DTOs.CreateOrder
         public CreateOrderDetailDtoValidator(IValidationService<CreateOrderDetailDto> service) 
             : base(service)
         {
-            AddRuleFor(od => od.ProductId, true)
+            AddRuleFor(od => od.ProductId)
                 .AddRequirement(od => od.ProductId > 0, "Debe especificar el identificador del producto.");
-            AddRuleFor(od => od.Quantity, true)
+            AddRuleFor(od => od.Quantity)
                 .AddRequirement(od => od.Quantity > 0, "Debe especificar la cantidad ordenada del producto.");
-            AddRuleFor(od => od.UnitPrice, true)
+            AddRuleFor(od => od.UnitPrice)
                 .AddRequirement(od => od.UnitPrice > 0, "Debe especificar el precio del producto.");
-            AddRuleFor(od => od, true)
+            AddRuleFor(od => od)
                 .AddRequirement(od => od.UnitPrice > 0 && od.Quantity > 0 && od.ProductId > 0, "Debe especificar los datos del detalle de la orden.");
         }
     }

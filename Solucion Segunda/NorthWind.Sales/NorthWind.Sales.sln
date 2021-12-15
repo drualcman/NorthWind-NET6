@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application Business Rules"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Sales.Entities", "NorthWind.Sales.Entities\NorthWind.Sales.Entities.csproj", "{F38583B5-89EE-454B-BEDC-0C65BF099832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Sales.DTOs", "NorthWind.Sales.DTOs\NorthWind.Sales.DTOs.csproj", "{F57DD483-FD82-4634-832B-B5D974B19968}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Sales.DTOs", "NorthWind.Sales.DTOs\NorthWind.Sales.DTOs.csproj", "{F57DD483-FD82-4634-832B-B5D974B19968}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

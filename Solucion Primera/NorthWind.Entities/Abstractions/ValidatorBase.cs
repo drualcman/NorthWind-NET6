@@ -44,7 +44,7 @@ namespace NorthWind.Entities.Abstractions
             //pasamos el modelo y devuelve la propiedad
             Expression<Func<T, TProperty>> expression,
             //define si hay que parar en la primera falla
-            bool stopInFirstFailure) => 
+            bool stopInFirstFailure = true) => 
             Service.AddRuleFor(expression, stopInFirstFailure);
 
         /// <summary>

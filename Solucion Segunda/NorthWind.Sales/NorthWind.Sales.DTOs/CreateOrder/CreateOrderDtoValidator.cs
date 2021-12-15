@@ -21,24 +21,24 @@ namespace NorthWind.Sales.DTOs.CreateOrder
         public CreateOrderDtoValidator(IValidationService<CreateOrderDto> service,
             IValidationService<CreateOrderDetailDto> detailService) : base(service)
         {
-            AddRuleFor(o => o.CustomerId, true)
+            AddRuleFor(o => o.CustomerId)
                 .AddRequirement(o => !string.IsNullOrWhiteSpace(o.CustomerId), "Debe proporcionar el identificador del cliente")
                 .AddRequirement(o => o.CustomerId.Length == 5, "La longitud del identificador debe ser de 5 caracteres.");
-            AddRuleFor(o => o.ShipAddress, true)
+            AddRuleFor(o => o.ShipAddress)
                 .AddRequirement(o => !string.IsNullOrWhiteSpace(o.ShipAddress), "Debe proporcionar la direccion del envio.")
                 .AddRequirement(o => o.ShipAddress.Length <= 60, "La longitud maxima de la direccion es 60 caracteres.");
-            AddRuleFor(o => o.ShipCity, true)
+            AddRuleFor(o => o.ShipCity)
                 .AddRequirement(o => !string.IsNullOrWhiteSpace(o.ShipAddress), "Debe proporcionar la ciudad del envio.")
                 .AddRequirement(o => o.ShipCity.Length >= 3, "Debe especificar al menos 3 caracteres de la ciudad.")
                 .AddRequirement(o => o.ShipCity.Length <= 15, "La longitud maxima de la ciudad es 15 caracteres.");
-            AddRuleFor(o => o.ShipCountry, true)
+            AddRuleFor(o => o.ShipCountry)
                 .AddRequirement(o => !string.IsNullOrWhiteSpace(o.ShipAddress), "Debe proporcionar el pais del envio.")
                 .AddRequirement(o => o.ShipCity.Length >= 3, "Debe especificar al menos 3 caracteres del pais.")
                 .AddRequirement(o => o.ShipCity.Length <= 15, "La longitud maxima del pais es 15 caracteres.");
-            AddRuleFor(o => o.ShipPostalCode, true)
+            AddRuleFor(o => o.ShipPostalCode)
                 .AddRequirement(o => o.ShipPostalCode.Length <= 10, "La longitud maxima de la codigo postal es 10 caracteres.");
 
-            AddRuleFor(o => o.OrderDetails, true)
+            AddRuleFor(o => o.OrderDetails)
                 .AddRequirement(o => o.OrderDetails != null, "Debe especificar los productos de la orden.")
                 .AddRequirement(o => o.OrderDetails.Any(), "Debe espeficicar al menos un producto de la ordem.")
                 .AddCollectionItemsValidator(o =>
