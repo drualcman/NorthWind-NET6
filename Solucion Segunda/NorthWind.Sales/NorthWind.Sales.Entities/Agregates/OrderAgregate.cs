@@ -33,11 +33,22 @@ namespace NorthWind.Sales.Entities.Agregates
             if (existingOrderDetail != null)
             {
                 //so existe solo agregar la cantidad
-                var newOrderDetail = existingOrderDetail.AddQuantity(orderDetail.Quantity);
+                OrderDetailsField.Add(existingOrderDetail with
+                {
+                    Quantity = (short)(existingOrderDetail.Quantity + orderDetail.Quantity)
+                });
                 OrderDetailsField.Remove(existingOrderDetail);
-                OrderDetailsField.Add(newOrderDetail);
             }
             else OrderDetailsField.Add(orderDetail);
         }
+
+        /// <summary>
+        /// Sobre carga para poder agregar el procuto directamente con los parametros
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="unitPrice"></param>
+        /// <param name="quantity"></param>
+        public void AddDetail(int productId, decimal unitPrice, short quantity) =>
+            AddDetail(new OrderDetail(productId, unitPrice, quantity));
     }
 }
