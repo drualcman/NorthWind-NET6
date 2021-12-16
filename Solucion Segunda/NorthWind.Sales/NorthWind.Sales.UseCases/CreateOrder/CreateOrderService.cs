@@ -78,7 +78,7 @@ namespace NorthWind.Sales.UseCases.CreateOrder
                 LogRepository.Add("Inicio de creacion de orden");
                 LogRepository.SaveChanges();
 
-                //inicar la transaccion
+                //inicar la transaccion, desde aqui o todo o nada
                 OrderRepository.CreateOrder(orderAgregate);     //devuelve excepcion en caso de que haya error
 
                 // Aqui podriamos tener una logica que nos haga cancelar la creacion de la orden
@@ -90,6 +90,7 @@ namespace NorthWind.Sales.UseCases.CreateOrder
                 
                 // como se pudo hacer todo se guardan los cambios
                 OrderRepository.SaveChanges();
+                //finalizar transaction
             }
             catch
             {
