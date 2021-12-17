@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.UseCases\NorthWind.Sales.UseCases.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NorthWind.EFCore.DataContexts">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.EFCore.DataContexts\bin\Debug\net6.0\NorthWind.EFCore.DataContexts.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.Entities">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.Entities\bin\Debug\net6.0\NorthWind.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

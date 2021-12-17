@@ -88,7 +88,7 @@ namespace NorthWind.Sales.UseCases.CreateOrder
                 LogRepository.Add($"Orden {orderAgregate.Id} ha sido creada");
                 LogRepository.SaveChanges();
                 
-                // como se pudo hacer todo se guardan los cambios
+                // como se pudo hacer todo se puede finalizar la transaction
                 OrderRepository.SaveChanges();
                 //finalizar transaction
             }

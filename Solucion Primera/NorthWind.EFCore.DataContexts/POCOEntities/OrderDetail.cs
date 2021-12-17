@@ -24,14 +24,14 @@ namespace NorthWind.EFCore.DataContexts.POCOEntities
         /// <summary>
         /// producto seleccionado
         /// </summary>
-        public int ProductId { get; }
+        public int ProductId { get; set; }
         /// <summary>
         /// precio del product
         /// </summary>
-        public decimal UnitPrice { get; }
+        public decimal UnitPrice { get; set; }
         /// <summary>
         /// cantidad ordenada
         /// </summary>
-        public short Quantity { get; }
+        public short Quantity { get; set; }
     }
 }
