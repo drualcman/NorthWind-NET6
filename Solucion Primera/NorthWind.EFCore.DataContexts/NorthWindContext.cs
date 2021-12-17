@@ -17,7 +17,7 @@ namespace NorthWind.EFCore.DataContexts
     /// El contexto de datos a utilizar en diseño
     /// Esto es exclusivamente para adminsitrar la base de datos
     /// add-migration InitialCreate -p NorthWind.EFCore.DataContexts -s NorthWind.EFCore.DataContexts -c NorthWindContext -o Migrations
-    ///  update-database -p NorthWind.EFCore.DataContexts -s NorthWind.EFCore.DataContexts -context NorthWindContext
+    /// update-database -p NorthWind.EFCore.DataContexts -s NorthWind.EFCore.DataContexts -context NorthWindContext
     /// </summary>
     internal class NorthWindContext : DbContext
     {
