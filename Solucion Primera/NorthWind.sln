@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.EFCore.DataContex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.EFCore.Repositories", "NorthWind.EFCore.Repositories\NorthWind.EFCore.Repositories.csproj", "{822B0875-B06A-439A-8BD7-3F2A659D20F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Mail", "NorthWind.Mail\NorthWind.Mail.csproj", "{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{822B0875-B06A-439A-8BD7-3F2A659D20F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{822B0875-B06A-439A-8BD7-3F2A659D20F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{822B0875-B06A-439A-8BD7-3F2A659D20F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{BF3708D1-0BFB-456C-B5EF-2DCB6CF8F9F4} = {1766D3EF-6AC1-4633-A8EA-CB6189E7DBF1}
 		{74519A33-5D94-43A4-B265-3966BD20D52C} = {BF3708D1-0BFB-456C-B5EF-2DCB6CF8F9F4}
 		{822B0875-B06A-439A-8BD7-3F2A659D20F7} = {BF3708D1-0BFB-456C-B5EF-2DCB6CF8F9F4}
+		{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD} = {1766D3EF-6AC1-4633-A8EA-CB6189E7DBF1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14DAD711-25B7-4420-A51C-DEF12F073CA1}
