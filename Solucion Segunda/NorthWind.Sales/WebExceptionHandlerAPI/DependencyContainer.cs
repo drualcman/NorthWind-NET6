@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NorthWind.Sales.UseCases.CreateOrder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using WebExceptionHandlerAPI.Interfaces;
 
-namespace NorthWind.Sales.EFCore.Repositories
+namespace WebExceptionHandlerAPI
 {
     /// <summary>
     /// Helper para injectar los servicios implementados dentro del projecto
@@ -17,10 +18,12 @@ namespace NorthWind.Sales.EFCore.Repositories
         /// Agregar todos servicios del projecto de entities
         /// </summary>
         /// <param name="services"></param>
+        /// <param name="exceptionHandlersAssembly"></param>
         /// <returns></returns>
-        public static IServiceCollection AddCreateOrderRepository(this IServiceCollection services)
+        public static IServiceCollection AddWebExceptionsHandlerPresenter(this IServiceCollection services,
+            Assembly exceptionHandlersAssembly)
         {
-            services.AddScoped<ICreateOrderRepository, CreateOrderRepository>();
+            services.AddSingleton<IWebExceptionPresenter>(provicer => new WebExceptionPresenter(exceptionHandlersAssembly));
             return services;
         }
     }

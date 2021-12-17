@@ -23,6 +23,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Respositories", "Respositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Sales.EFCore.Repositories", "NorthWind.Sales.EFCore.Repositories\NorthWind.Sales.EFCore.Repositories.csproj", "{9EDDEA8C-F8FF-4B34-9690-09767CABDAAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presenters", "Presenters", "{3B6D89B0-A671-4C14-B66F-9F17FC86E600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExceptionHandlerAPI", "WebExceptionHandlerAPI\WebExceptionHandlerAPI.csproj", "{3496CF81-FCA1-4D28-86A5-9C47DA1FCB65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExceptionHandlerAPIMiddleWare", "WebExceptionHandlerAPIMiddleWare\WebExceptionHandlerAPIMiddleWare.csproj", "{E852035E-3206-43E5-8394-F893A2C5788F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.WebExceptionHandlerPresenters", "NorthWind.WebExceptionHandlerPresenters\NorthWind.WebExceptionHandlerPresenters.csproj", "{B3A13DC5-4421-4F72-B201-49C5FC64A845}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +61,18 @@ Global
 		{9EDDEA8C-F8FF-4B34-9690-09767CABDAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EDDEA8C-F8FF-4B34-9690-09767CABDAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EDDEA8C-F8FF-4B34-9690-09767CABDAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3496CF81-FCA1-4D28-86A5-9C47DA1FCB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3496CF81-FCA1-4D28-86A5-9C47DA1FCB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3496CF81-FCA1-4D28-86A5-9C47DA1FCB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3496CF81-FCA1-4D28-86A5-9C47DA1FCB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E852035E-3206-43E5-8394-F893A2C5788F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E852035E-3206-43E5-8394-F893A2C5788F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E852035E-3206-43E5-8394-F893A2C5788F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E852035E-3206-43E5-8394-F893A2C5788F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A13DC5-4421-4F72-B201-49C5FC64A845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A13DC5-4421-4F72-B201-49C5FC64A845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A13DC5-4421-4F72-B201-49C5FC64A845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A13DC5-4421-4F72-B201-49C5FC64A845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +86,10 @@ Global
 		{8BFE9C35-81DD-4812-BC04-363C80C97D3C} = {50C339E1-602F-4C4B-A431-31577B8D9131}
 		{4D538AE3-D1AC-407B-A1D6-809ECE9A0370} = {8BFE9C35-81DD-4812-BC04-363C80C97D3C}
 		{9EDDEA8C-F8FF-4B34-9690-09767CABDAAA} = {4D538AE3-D1AC-407B-A1D6-809ECE9A0370}
+		{3B6D89B0-A671-4C14-B66F-9F17FC86E600} = {50C339E1-602F-4C4B-A431-31577B8D9131}
+		{3496CF81-FCA1-4D28-86A5-9C47DA1FCB65} = {3B6D89B0-A671-4C14-B66F-9F17FC86E600}
+		{E852035E-3206-43E5-8394-F893A2C5788F} = {3B6D89B0-A671-4C14-B66F-9F17FC86E600}
+		{B3A13DC5-4421-4F72-B201-49C5FC64A845} = {3B6D89B0-A671-4C14-B66F-9F17FC86E600}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67EADAAA-F45E-47F6-BE5F-62F4DB51F3C9}
