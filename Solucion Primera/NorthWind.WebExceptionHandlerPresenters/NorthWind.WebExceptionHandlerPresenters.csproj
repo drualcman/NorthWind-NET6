@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Entities\NorthWind.Entities.csproj" />
+    <ProjectReference Include="..\WebExceptionHandlerAPI\WebExceptionHandlerAPI.csproj" />
+  </ItemGroup>
+
+</Project>
