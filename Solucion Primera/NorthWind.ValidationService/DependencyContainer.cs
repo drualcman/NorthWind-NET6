@@ -1,13 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NorthWind.Entities.Interfaces.Events;
+using NorthWind.Entities.Interfaces.Validation;
+using NorthWind.Entities.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using WebExceptionHandlerAPI.Interfaces;
 
-namespace WebExceptionHandlerAPI
+namespace NorthWind.ValidationService
 {
     /// <summary>
     /// Helper para injectar los servicios implementados dentro del projecto
@@ -18,12 +19,10 @@ namespace WebExceptionHandlerAPI
         /// Agregar todos servicios del projecto de entities
         /// </summary>
         /// <param name="services"></param>
-        /// <param name="exceptionHandlersAssembly"></param>
         /// <returns></returns>
-        public static IServiceCollection AddWebExceptionsHandlerPresenter(this IServiceCollection services,
-            Assembly exceptionHandlersAssembly)
+        public static IServiceCollection AddValidationService(this IServiceCollection services)
         {
-            services.AddSingleton<IWebExceptionPresenter>(provicer => new WebExceptionPresenter(exceptionHandlersAssembly));
+            services.AddScoped(typeof(IValidationService<>), typeof(ValidatorWrapper<>));
             return services;
         }
     }
