@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.Controllers\NorthWind.Sales.Controllers.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.EFCore.Repositories\NorthWind.Sales.EFCore.Repositories.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.Presenters\NorthWind.Sales.Presenters.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NorthWind.EFCore.DataContexts">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.EFCore.DataContexts\bin\Debug\net6.0\NorthWind.EFCore.DataContexts.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.EFCore.Repositories">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.EFCore.Repositories\bin\Debug\net6.0\NorthWind.EFCore.Repositories.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.Entities">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.Entities\bin\Debug\net6.0\NorthWind.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.Loggers">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.Loggers\bin\Debug\net6.0\NorthWind.Loggers.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.Mail">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.Mail\bin\Debug\net6.0\NorthWind.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.ValidationService">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.ValidationService\bin\Debug\net6.0\NorthWind.ValidationService.dll</HintPath>
+    </Reference>
+    <Reference Include="WebExceptionHandlerAPI">
+      <HintPath>..\..\..\Solucion Primera\WebExceptionHandlerAPI\bin\Debug\net6.0\WebExceptionHandlerAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

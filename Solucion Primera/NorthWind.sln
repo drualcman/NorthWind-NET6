@@ -15,11 +15,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositorie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.EFCore.DataContexts", "NorthWind.EFCore.DataContexts\NorthWind.EFCore.DataContexts.csproj", "{74519A33-5D94-43A4-B265-3966BD20D52C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.EFCore.Repositories", "NorthWind.EFCore.Repositories\NorthWind.EFCore.Repositories.csproj", "{822B0875-B06A-439A-8BD7-3F2A659D20F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.EFCore.Repositories", "NorthWind.EFCore.Repositories\NorthWind.EFCore.Repositories.csproj", "{822B0875-B06A-439A-8BD7-3F2A659D20F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Mail", "NorthWind.Mail\NorthWind.Mail.csproj", "{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Mail", "NorthWind.Mail\NorthWind.Mail.csproj", "{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Loggers", "NorthWind.Loggers\NorthWind.Loggers.csproj", "{3DA085F0-6DA7-42C0-A6C1-7AD5B51D2435}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Loggers", "NorthWind.Loggers\NorthWind.Loggers.csproj", "{3DA085F0-6DA7-42C0-A6C1-7AD5B51D2435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presenters", "Presenters", "{FB0DC1E0-3E98-496C-81E2-005826BCA37A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleValidationApi", "SimpleValidationApi\SimpleValidationApi.csproj", "{853DF614-3A86-4D73-AF5A-5581A14E9B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.ValidationService", "NorthWind.ValidationService\NorthWind.ValidationService.csproj", "{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExceptionHandlerAPI", "WebExceptionHandlerAPI\WebExceptionHandlerAPI.csproj", "{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExceptionHandlerAPIMiddleWare", "WebExceptionHandlerAPIMiddleWare\WebExceptionHandlerAPIMiddleWare.csproj", "{D167F23D-FF5C-497D-85EB-04592C8A297F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.WebExceptionHandlerPresenters", "NorthWind.WebExceptionHandlerPresenters\NorthWind.WebExceptionHandlerPresenters.csproj", "{C6DDEB96-8176-4205-BE11-19D23783EE30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +59,26 @@ Global
 		{3DA085F0-6DA7-42C0-A6C1-7AD5B51D2435}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA085F0-6DA7-42C0-A6C1-7AD5B51D2435}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA085F0-6DA7-42C0-A6C1-7AD5B51D2435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853DF614-3A86-4D73-AF5A-5581A14E9B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853DF614-3A86-4D73-AF5A-5581A14E9B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853DF614-3A86-4D73-AF5A-5581A14E9B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853DF614-3A86-4D73-AF5A-5581A14E9B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D167F23D-FF5C-497D-85EB-04592C8A297F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D167F23D-FF5C-497D-85EB-04592C8A297F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D167F23D-FF5C-497D-85EB-04592C8A297F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D167F23D-FF5C-497D-85EB-04592C8A297F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +91,12 @@ Global
 		{822B0875-B06A-439A-8BD7-3F2A659D20F7} = {BF3708D1-0BFB-456C-B5EF-2DCB6CF8F9F4}
 		{3BD1B7E4-E45F-46DF-80F6-5FCE0AF35EAD} = {1766D3EF-6AC1-4633-A8EA-CB6189E7DBF1}
 		{3DA085F0-6DA7-42C0-A6C1-7AD5B51D2435} = {1766D3EF-6AC1-4633-A8EA-CB6189E7DBF1}
+		{FB0DC1E0-3E98-496C-81E2-005826BCA37A} = {72A4107B-333E-4DB4-BBB3-DB7AD0202213}
+		{853DF614-3A86-4D73-AF5A-5581A14E9B4A} = {72A4107B-333E-4DB4-BBB3-DB7AD0202213}
+		{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0} = {1766D3EF-6AC1-4633-A8EA-CB6189E7DBF1}
+		{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF} = {FB0DC1E0-3E98-496C-81E2-005826BCA37A}
+		{D167F23D-FF5C-497D-85EB-04592C8A297F} = {FB0DC1E0-3E98-496C-81E2-005826BCA37A}
+		{C6DDEB96-8176-4205-BE11-19D23783EE30} = {FB0DC1E0-3E98-496C-81E2-005826BCA37A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14DAD711-25B7-4420-A51C-DEF12F073CA1}

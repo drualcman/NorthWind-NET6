@@ -23,7 +23,7 @@ namespace NorthWind.Sales.UseCases
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddUseCases(this IServiceCollection services)
+        public static IServiceCollection AddUseCasesServices(this IServiceCollection services)
         {
             services.AddScoped<CreateOrderService>();
             services.AddScoped<ICreateOrderInputPort, CreateOrderInteractor>();
