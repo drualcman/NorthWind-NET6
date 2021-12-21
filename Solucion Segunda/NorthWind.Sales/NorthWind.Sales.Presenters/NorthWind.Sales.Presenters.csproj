@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.UseCases\NorthWind.Sales.UseCases.csproj" />
+    <ProjectReference Include="..\NorthWind.Sales.ViewModels\NorthWind.Sales.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NorthWind.Entities">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.Entities\bin\Debug\net6.0\NorthWind.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
