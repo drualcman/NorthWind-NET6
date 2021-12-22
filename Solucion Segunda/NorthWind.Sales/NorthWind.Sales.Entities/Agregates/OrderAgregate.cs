@@ -30,7 +30,7 @@ namespace NorthWind.Sales.Entities.Agregates
             //buscar si exsiste
             var existingOrderDetail =
                 OrderDetailsField.FirstOrDefault(o => o.ProductId == orderDetail.ProductId);
-            if (existingOrderDetail != null)
+            if (existingOrderDetail != default)
             {
                 //so existe solo agregar la cantidad
                 OrderDetailsField.Add(existingOrderDetail with

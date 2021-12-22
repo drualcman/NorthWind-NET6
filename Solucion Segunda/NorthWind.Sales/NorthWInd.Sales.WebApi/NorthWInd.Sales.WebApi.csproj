@@ -1,5 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TypeScriptOutDir>swagger</TypeScriptOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TypeScriptOutDir>swagger</TypeScriptOutDir>
+  </PropertyGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -8,6 +16,19 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.IoC\NorthWind.Sales.IoC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WebExceptionHandlerAPI">
+      <HintPath>..\..\..\Solucion Primera\WebExceptionHandlerAPI\bin\Debug\net6.0\WebExceptionHandlerAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebExceptionHandlerAPIMiddleWare">
+      <HintPath>..\..\..\Solucion Primera\WebExceptionHandlerAPIMiddleWare\bin\Debug\net6.0\WebExceptionHandlerAPIMiddleWare.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

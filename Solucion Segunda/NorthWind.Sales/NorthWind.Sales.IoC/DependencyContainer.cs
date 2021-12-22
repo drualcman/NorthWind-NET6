@@ -11,6 +11,7 @@ using NorthWind.Mail;
 using NorthWind.Sales.Controllers;
 using NorthWind.Sales.DTOs;
 using NorthWind.Sales.EFCore.Repositories;
+using NorthWind.Sales.Events;
 using NorthWind.Sales.Ports.CreateOrder;
 using NorthWind.Sales.Presenters;
 using NorthWind.Sales.UseCases;
@@ -39,8 +40,10 @@ namespace NorthWind.Sales.IoC
             IConfiguration configuration, string connectionStringName)
         {
 
-            services.AddEntitiesServices()
+            services
+                .AddEntitiesServices()
                 .AddLoggers()
+                .AddEventsHandler()
                 .AddMailService()
                 .AddDataContexts(configuration, connectionStringName)
                 .AddLogRespository()

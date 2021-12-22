@@ -31,6 +31,12 @@
     <Reference Include="NorthWind.ValidationService">
       <HintPath>..\..\..\Solucion Primera\NorthWind.ValidationService\bin\Debug\net6.0\NorthWind.ValidationService.dll</HintPath>
     </Reference>
+    <Reference Include="NorthWind.WebExceptionHandlerPresenters">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.WebExceptionHandlerPresenters\bin\Debug\net6.0\NorthWind.WebExceptionHandlerPresenters.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleValidationApi">
+      <HintPath>..\..\..\Solucion Primera\SimpleValidationApi\bin\Debug\net6.0\SimpleValidationApi.dll</HintPath>
+    </Reference>
     <Reference Include="WebExceptionHandlerAPI">
       <HintPath>..\..\..\Solucion Primera\WebExceptionHandlerAPI\bin\Debug\net6.0\WebExceptionHandlerAPI.dll</HintPath>
     </Reference>
