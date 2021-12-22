@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Sales.IoC", "Nort
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks and Drivers", "Frameworks and Drivers", "{3B19BBAB-A968-41EA-ADDD-4C89CE94F6FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWInd.Sales.WebApi", "NorthWInd.Sales.WebApi\NorthWInd.Sales.WebApi.csproj", "{D4C2AF69-C913-41FC-92F2-F18381EF40E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWInd.Sales.WebApi", "NorthWInd.Sales.WebApi\NorthWInd.Sales.WebApi.csproj", "{D4C2AF69-C913-41FC-92F2-F18381EF40E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

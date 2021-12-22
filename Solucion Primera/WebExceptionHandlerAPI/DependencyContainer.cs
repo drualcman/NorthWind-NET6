@@ -20,10 +20,12 @@ namespace WebExceptionHandlerAPI
         /// <param name="services"></param>
         /// <param name="exceptionHandlersAssembly"></param>
         /// <returns></returns>
-        public static IServiceCollection AddWebExceptionsHandlerPresenter(this IServiceCollection services,
+        public static IServiceCollection AddWebExceptionsHandlerPresenter(
+            this IServiceCollection services,
             Assembly exceptionHandlersAssembly)
         {
-            services.AddSingleton<IWebExceptionPresenter>(provicer => new WebExceptionPresenter(exceptionHandlersAssembly));
+            services.AddSingleton<IWebExceptionPresenter>(provicer => 
+            new WebExceptionPresenter(exceptionHandlersAssembly));
             return services;
         }
     }

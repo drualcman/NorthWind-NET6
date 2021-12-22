@@ -15,6 +15,7 @@ namespace NorthWind.WebExceptionHandlerPresenters
         /// <summary>
         /// Recoger el aseembly actual para buscar los manejadores de excepion
         /// </summary>
-        public static Assembly Assembly => Assembly.GetExecutingAssembly();
+        public static Assembly Assembly => 
+            Assembly.GetExecutingAssembly();
     }
 }

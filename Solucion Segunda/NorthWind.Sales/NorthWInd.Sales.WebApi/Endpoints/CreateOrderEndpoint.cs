@@ -9,7 +9,7 @@ namespace NorthWInd.Sales.WebApi.Endpoints
             ICreateOrderController controller)
         {
             var createOrderViewModel = await controller.CreateOrder(order);
-            return Results.Ok(createOrderViewModel);
+            return Results.Ok(createOrderViewModel.OrderId);
         }
     }
 }

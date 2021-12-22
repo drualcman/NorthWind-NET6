@@ -16,6 +16,7 @@ using NorthWind.Sales.Ports.CreateOrder;
 using NorthWind.Sales.Presenters;
 using NorthWind.Sales.UseCases;
 using NorthWind.ValidationService;
+using NorthWind.WebExceptionHandlerPresenters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +53,7 @@ namespace NorthWind.Sales.IoC
                 .AddDtoValidators()
                 .AddPresenters()
                 .AddNorthWindSalesControlers()
-                .AddWebExceptionsHandlerPresenter(Assembly.GetExecutingAssembly())
+                .AddWebExceptionsHandlerPresenter(ExceptionHandlersPresenters.Assembly)
                 .AddValidationService();
 
             return services;

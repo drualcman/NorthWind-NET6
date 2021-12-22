@@ -20,17 +20,17 @@ namespace NorthWind.ValidationService
         /// <summary>
         /// recibir el validador
         /// </summary>
-        /// <param name="apiValidatorField"></param>
-        public ValidatorWrapper(Validator<T> apiValidatorField)
+        public ValidatorWrapper()
         {
-            ApiValidatorField = apiValidatorField;
+            ApiValidatorField = new Validator<T>(); 
         }
 
         /// <summary>
         /// devolver los fallos
         /// </summary>
-        public List<IFailure> Failures => ApiValidatorField.Failures
-            .Select(f => new Failure(f.PropertyName, f.ErrorMessage))
+        public List<IFailure> Failures => 
+            ApiValidatorField.Failures.Select(
+                f => new Failure(f.PropertyName, f.ErrorMessage))
             .ToList<IFailure>();
 
         /// <summary>

@@ -21,7 +21,7 @@ namespace NorthWind.Entities
         /// <returns></returns>
         public static IServiceCollection AddEntitiesServices(this IServiceCollection services)
         {
-            services.AddScoped(typeof(IDomainEventHub<>), typeof(DomainEventHub<>));
+            services.AddScoped(typeof(IDomainEventHub<>), typeof(DomainEventHub<>));            
             return services;
         }
     }
