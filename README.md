@@ -1,4 +1,4 @@
-Caso de uso
+Caso de uso 1
 Historia de usuario: Crear orden de compra.
 
 Como usuario del sistema deseo crear una orden de compra para solicitar productos del almacen.
@@ -46,3 +46,25 @@ Validaciones:
 Opcionales:
 - Validar existencia del producto antes de aceptar la ordern.
 - Verificar que el cliente no tenga adeudos para poder aceptar la orden.
+
+Caso de uso 2
+Implementar Caso de uso Obtener listado de órdenes de compra
+Caso de uso
+Historia de usuario: Obtener listado de órdenes de compra
+Como usuario del sistema, deseo obtener un listado de las órdenes de compra creadas en una fecha específica para fines de consulta de la información.
+
+Case de uso: Obtener listado de órdenes de compra
+Datos de entrada:
+ Fecha
+
+Flujo primario
+1.	El usuario envía la solicitud “Obtener listado de órdenes de compra” especificando una fecha.
+2.	El sistema valida que la fecha sea menor o igual a la fecha actual.
+3.	El sistema obtiene el listado de órdenes de compra creadas en la fecha especificada.
+4.	El sistema registra la acción “Obtener listado de órdenes de compra” con fines históricos.
+5.	El sistema devuelve al usuario el listado de las órdenes de compra.
+
+Flujo alterno: Error de validación.
+1.	El procesamiento de la solicitud es cancelado.
+2.	El error es registrado en la bitácora de errores del sistema.
+3.	El sistema muestra el error al usuario. 
