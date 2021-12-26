@@ -27,6 +27,7 @@ namespace WebExceptionHandlerAPIMiddleWare
             {
                 await presenter.Handle(exception, includeDetails);
                 context.Response.ContentType = "application/problem+json";
+                context.Response.StatusCode = presenter.Content.Status.Value;
                 var stream = context.Response.Body;
                 await JsonSerializer.SerializeAsync(stream, presenter.Content);
             }            

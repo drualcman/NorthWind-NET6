@@ -1,0 +1,13 @@
+﻿@page "/createorder"
+<h3>Create Order</h3>
+
+<ErrorBoundary @ref=ErrorBoundaryRef>
+    <ChildContent>
+        <CreateOrder Order=Order />
+    </ChildContent>
+    <ErrorContent>
+        <ExceptionView Exception=context>
+            <button class="btn btn-danger" @onclick=Recover>OK</button>
+        </ExceptionView>
+    </ErrorContent>
+</ErrorBoundary>

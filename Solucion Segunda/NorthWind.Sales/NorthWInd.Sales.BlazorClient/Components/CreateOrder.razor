@@ -1,0 +1,76 @@
+﻿<EditForm Model=Order OnValidSubmit=Send>
+    <div class="form-group">
+        <label for="customerId">Id del cliente</label>
+        <InputText class="form-control" id="customerId" 
+            placehoder="Id del cliente"
+            @bind-Value="Order.CustomerId" />
+    </div>
+
+    <div class="form-group">
+        <label for="shipAddress">Direccion</label>
+        <InputText class="form-control" id="shipAddress" 
+            placehoder="Direccion"
+            @bind-Value="Order.ShipAddress" />
+    </div>
+    <div class="form-group">
+        <label for="shipCity">Ciudad</label>
+        <InputText class="form-control" id="shipCity" 
+            placehoder="Ciudad"
+            @bind-Value="Order.ShipCity" />
+    </div>
+    <div class="form-group">
+        <label for="shipCountry">Pais</label>
+        <InputText class="form-control" id="shipCountry" 
+            placehoder="Pais"
+            @bind-Value="Order.ShipCountry" />
+    </div>
+    <div class="form-group">
+        <label for="shipPostalCode">Codigo postal</label>
+        <InputText class="form-control" id="shipPostalCode" 
+            placehoder="00000"
+            @bind-Value="Order.ShipPostalCode" />
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col">Id del producto</div>
+        <div class="col">Precio</div>
+        <div class="col">Cantidad</div>
+
+    </div>
+    @foreach (var product in Order.OrderDetails)
+    {
+        <div class="row">
+            <div class="col">
+                <InputNumber class="form-control"
+                    placehoder="Id del product"
+                    @bind-Value="product.ProductId" />
+            </div>
+            <div class="col">
+                <InputNumber class="form-control"
+                    placehoder="precio"
+                    @bind-Value="product.UnitPrice" />
+            </div>
+            <div class="col">
+                <InputNumber class="form-control"
+                    placehoder="cantidad"
+                    @bind-Value="product.Quantity" />
+            </div>
+        </div>
+    }
+    <div class="row p-3">
+        <div class="col">
+            <button type="button" class="btn btn-secondary" @onclick=AddNewOrderDetailItem>Agregar producto</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+</EditForm>
+
+<hr/>
+@if (!string.IsNullOrEmpty(Message))
+{
+    <div class="alert alert-info">
+        @Message
+    </div>
+}

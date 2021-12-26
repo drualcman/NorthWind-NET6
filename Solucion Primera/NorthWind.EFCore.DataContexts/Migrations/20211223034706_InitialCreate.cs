@@ -5,9 +5,6 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NorthWind.EFCore.DataContexts.Migrations
 {
-    /// <summary>
-    /// crear la migracion
-    /// </summary>
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -53,7 +50,8 @@ namespace NorthWind.EFCore.DataContexts.Migrations
                 {
                     OrderId = table.Column<int>(type: "int", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    UnitPrice = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false)
+                    UnitPrice = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
+                    Quantity = table.Column<short>(type: "smallint", nullable: false)
                 },
                 constraints: table =>
                 {

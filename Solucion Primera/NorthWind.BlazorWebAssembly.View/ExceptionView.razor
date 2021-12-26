@@ -1,0 +1,26 @@
+﻿<div class="alert alert-danger">
+    <div>
+        @Exception.Message
+    </div>
+    @if (Exception.GetType() == typeof(ProblemDetailsException))
+    {
+        var ex = Exception as ProblemDetailsException;
+        <div>
+            @ex.Detail
+        </div>
+        if (ex.InvalidParams != null)
+        {
+            foreach (var failure in ex.InvalidParams)
+            {
+                <div>
+                    @failure.Key: @failure.Value
+                </div>
+            }
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Exception Exception { get; set; }
+}

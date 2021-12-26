@@ -12,7 +12,7 @@ using NorthWind.EFCore.DataContexts;
 namespace NorthWind.EFCore.DataContexts.Migrations
 {
     [DbContext(typeof(NorthWindContext))]
-    [Migration("20211216025752_InitialCreate")]
+    [Migration("20211223034706_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace NorthWind.EFCore.DataContexts.Migrations
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
+
+                    b.Property<short>("Quantity")
+                        .HasColumnType("smallint");
 
                     b.Property<decimal>("UnitPrice")
                         .HasPrecision(8, 2)

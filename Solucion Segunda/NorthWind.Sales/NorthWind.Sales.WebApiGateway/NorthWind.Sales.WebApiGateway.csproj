@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.DTOs\NorthWind.Sales.DTOs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NorthWind.BlazorWebAssembly.Entities">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.BlazorWebAssembly.Entities\bin\Debug\net6.0\NorthWind.BlazorWebAssembly.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

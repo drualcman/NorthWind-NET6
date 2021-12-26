@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.1" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.WebApiGateway\NorthWind.Sales.WebApiGateway.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NorthWind.BlazorWebAssembly.Entities">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.BlazorWebAssembly.Entities\bin\Debug\net6.0\NorthWind.BlazorWebAssembly.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthWind.BlazorWebAssembly.View">
+      <HintPath>..\..\..\Solucion Primera\NorthWind.BlazorWebAssembly.View\bin\Debug\net6.0\NorthWind.BlazorWebAssembly.View.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

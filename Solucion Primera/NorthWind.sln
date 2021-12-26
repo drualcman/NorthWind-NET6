@@ -23,15 +23,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Loggers", "NorthW
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presenters", "Presenters", "{FB0DC1E0-3E98-496C-81E2-005826BCA37A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleValidationApi", "SimpleValidationApi\SimpleValidationApi.csproj", "{853DF614-3A86-4D73-AF5A-5581A14E9B4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleValidationApi", "SimpleValidationApi\SimpleValidationApi.csproj", "{853DF614-3A86-4D73-AF5A-5581A14E9B4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.ValidationService", "NorthWind.ValidationService\NorthWind.ValidationService.csproj", "{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.ValidationService", "NorthWind.ValidationService\NorthWind.ValidationService.csproj", "{DFC698D9-A40D-4A4C-AFBC-D7AFE8A517B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExceptionHandlerAPI", "WebExceptionHandlerAPI\WebExceptionHandlerAPI.csproj", "{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExceptionHandlerAPIMiddleWare", "WebExceptionHandlerAPIMiddleWare\WebExceptionHandlerAPIMiddleWare.csproj", "{D167F23D-FF5C-497D-85EB-04592C8A297F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.WebExceptionHandlerPresenters", "NorthWind.WebExceptionHandlerPresenters\NorthWind.WebExceptionHandlerPresenters.csproj", "{C6DDEB96-8176-4205-BE11-19D23783EE30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazorWebAssembly.Entities", "NorthWind.BlazorWebAssembly.Entities\NorthWind.BlazorWebAssembly.Entities.csproj", "{AF4071F0-0718-4ECF-82B9-151E861CABC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{F0154014-AB45-44DC-8B3F-0BC85B1C1177}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.BlazorWebAssembly.View", "NorthWind.BlazorWebAssembly.View\NorthWind.BlazorWebAssembly.View.csproj", "{9C087EF7-7DC6-4D25-B8DC-3A9003F3406B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +85,14 @@ Global
 		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6DDEB96-8176-4205-BE11-19D23783EE30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4071F0-0718-4ECF-82B9-151E861CABC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4071F0-0718-4ECF-82B9-151E861CABC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4071F0-0718-4ECF-82B9-151E861CABC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4071F0-0718-4ECF-82B9-151E861CABC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C087EF7-7DC6-4D25-B8DC-3A9003F3406B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C087EF7-7DC6-4D25-B8DC-3A9003F3406B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C087EF7-7DC6-4D25-B8DC-3A9003F3406B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C087EF7-7DC6-4D25-B8DC-3A9003F3406B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +111,9 @@ Global
 		{5F53AD00-509A-4C37-BFE3-CB0CCB41F1DF} = {FB0DC1E0-3E98-496C-81E2-005826BCA37A}
 		{D167F23D-FF5C-497D-85EB-04592C8A297F} = {FB0DC1E0-3E98-496C-81E2-005826BCA37A}
 		{C6DDEB96-8176-4205-BE11-19D23783EE30} = {FB0DC1E0-3E98-496C-81E2-005826BCA37A}
+		{AF4071F0-0718-4ECF-82B9-151E861CABC5} = {757DD227-4FB4-4751-BF85-BFCCD2E90BB8}
+		{F0154014-AB45-44DC-8B3F-0BC85B1C1177} = {72A4107B-333E-4DB4-BBB3-DB7AD0202213}
+		{9C087EF7-7DC6-4D25-B8DC-3A9003F3406B} = {F0154014-AB45-44DC-8B3F-0BC85B1C1177}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14DAD711-25B7-4420-A51C-DEF12F073CA1}

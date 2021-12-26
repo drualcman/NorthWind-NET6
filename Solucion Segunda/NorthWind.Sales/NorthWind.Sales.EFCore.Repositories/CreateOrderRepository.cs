@@ -12,14 +12,14 @@ namespace NorthWind.Sales.EFCore.Repositories
     /// </summary>
     public class CreateOrderRepository : ICreateOrderRepository
     {
-        readonly NorthWindLogContext Context;
+        readonly NorthWindOrderContext Context;
         TransactionScope TransactionScope;
 
         /// <summary>
         /// Constructor que recibe el contexto de datos
         /// </summary>
         /// <param name="context"></param>
-        public CreateOrderRepository(NorthWindLogContext context)
+        public CreateOrderRepository(NorthWindOrderContext context)
         {
             Context = context;
         }
@@ -52,8 +52,9 @@ namespace NorthWind.Sales.EFCore.Repositories
                 //se tiene que cuardar en este momento para poder tener el orderid
                 DataContextGuards.SaveChanges(Context);
             }
-            catch
+            catch (Exception ex)
             {
+                string err = ex.Message;
                 TransactionScope.Dispose();         //hace el comit
                 throw;
             }

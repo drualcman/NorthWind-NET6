@@ -15,7 +15,15 @@ namespace NorthWInd.Sales.WebApi
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddNorthwindSalesServices(builder.Configuration, "NorthWinDB");
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin();
+                    builder.AllowAnyMethod();
+                    builder.AllowAnyHeader();
+                });
+            });
             return builder.Build();
         }
 
@@ -33,6 +41,7 @@ namespace NorthWInd.Sales.WebApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseCors();
 
             app.UseApplicationEndpints();
 
