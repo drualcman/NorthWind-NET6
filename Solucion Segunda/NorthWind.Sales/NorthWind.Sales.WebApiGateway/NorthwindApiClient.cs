@@ -1,4 +1,5 @@
-﻿using NorthWind.Sales.DTOs.CreateOrder;
+﻿using NorthWind.BlazorWebAssembly.Entities.Exceptions;
+using NorthWind.Sales.DTOs.CreateOrder;
 using System.Net.Http.Json;
 using System.Text.Json;
 

@@ -4,11 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\NorthWind.Sales.DTOs\NorthWind.Sales.DTOs.csproj" />
-  </ItemGroup>
 
 </Project>

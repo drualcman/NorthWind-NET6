@@ -5,6 +5,7 @@ using NorthWind.EFCore.Repositories;
 using NorthWind.Entities;
 using NorthWind.Loggers;
 using NorthWind.Mail;
+using NorthWind.Sales.ADONET.Repository;
 using NorthWind.Sales.Controllers;
 using NorthWind.Sales.DTOs;
 using NorthWind.Sales.EFCore.Repositories;
@@ -44,7 +45,8 @@ namespace NorthWind.Sales.IoC
                 .AddPresenters()
                 .AddNorthWindSalesControlers()
                 .AddWebExceptionsHandlerPresenter(ExceptionHandlersPresenters.Assembly)
-                .AddValidationService();
+                .AddValidationService()
+                .AddOrderReadableRepository(configuration, connectionStringName);
 
             return services;
         }

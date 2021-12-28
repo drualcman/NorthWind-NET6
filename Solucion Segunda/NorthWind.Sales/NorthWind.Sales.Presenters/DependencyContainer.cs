@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NorthWind.Sales.Ports.Common;
 using NorthWind.Sales.Ports.CreateOrder;
 
 namespace NorthWind.Sales.Presenters
@@ -16,6 +17,7 @@ namespace NorthWind.Sales.Presenters
         public static IServiceCollection AddPresenters(this IServiceCollection services)
         {
             services.AddScoped<ICreateOrderOutPort, CreateOrderPresenter>();
+            services.AddScoped<IGetOrdersOutputPort, OrdersPresenter>();
             return services;
         }
     }

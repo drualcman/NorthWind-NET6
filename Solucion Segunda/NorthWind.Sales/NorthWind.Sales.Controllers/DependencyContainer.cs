@@ -15,6 +15,7 @@ namespace NorthWind.Sales.Controllers
         public static IServiceCollection AddNorthWindSalesControlers(this IServiceCollection services)
         {
             services.AddScoped<ICreateOrderController, CreateOrderController>();
+            services.AddScoped<IGetOrdersByDateController, GetOrdersByDateController>();
             return services;
         }
     }

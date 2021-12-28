@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.ADONET.Repository\NorthWind.Sales.ADONET.Repository.csproj" />
     <ProjectReference Include="..\NorthWind.Sales.Controllers\NorthWind.Sales.Controllers.csproj" />
     <ProjectReference Include="..\NorthWind.Sales.EFCore.Repositories\NorthWind.Sales.EFCore.Repositories.csproj" />
     <ProjectReference Include="..\NorthWind.Sales.Presenters\NorthWind.Sales.Presenters.csproj" />

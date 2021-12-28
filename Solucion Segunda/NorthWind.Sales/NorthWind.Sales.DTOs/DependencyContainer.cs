@@ -1,13 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NorthWind.Entities.Interfaces.Events;
 using NorthWind.Entities.Interfaces.Validation;
-using NorthWind.Entities.Services;
 using NorthWind.Sales.DTOs.CreateOrder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NorthWind.Sales.DTOs.GetOrdersByDate;
 
 namespace NorthWind.Sales.DTOs
 {
@@ -25,6 +19,7 @@ namespace NorthWind.Sales.DTOs
         {
             services.AddScoped<IValidator<CreateOrderDetailDto>, CreateOrderDetailDtoValidator>();
             services.AddScoped<IValidator<CreateOrderDto>, CreateOrderDtoValidator>();
+            services.AddScoped<IValidator<GetOrdersByDateDto>, GetOrdersByDateDtoValidator>();
             return services;
         }
     }

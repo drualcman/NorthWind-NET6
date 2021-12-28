@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NorthWind.Sales.Ports.CreateOrder;
+using NorthWind.Sales.Ports.GetOrdersByDate;
 using NorthWind.Sales.UseCases.CreateOrder;
+using NorthWind.Sales.UseCases.GetOrdersByDate;
 
 namespace NorthWind.Sales.UseCases
 {
@@ -18,6 +20,7 @@ namespace NorthWind.Sales.UseCases
         {
             services.AddScoped<CreateOrderService>();
             services.AddScoped<ICreateOrderInputPort, CreateOrderInteractor>();
+            services.AddScoped<IGetOrdersByDateInputPort, GetOrdersByDateInteractor>();
             return services;
         }
     }

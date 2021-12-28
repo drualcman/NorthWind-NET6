@@ -17,6 +17,7 @@ namespace NorthWind.Sales.UseCases.CreateOrder
         readonly ICreateOrderRepository OrderRepository;
         readonly IDomainEventHub<SpecialOrderCreatedEvent> DomainEventHub;
         readonly ILogWritableRepository LogRepository;
+        readonly ICreateOrderValidationRepository ValidationRepository;
 
         /// <summary>
         /// recibir las abstracciones por injeccion de dependencias
@@ -25,13 +26,16 @@ namespace NorthWind.Sales.UseCases.CreateOrder
         /// <param name="orderRepository"></param>
         /// <param name="domainEventHub"></param>
         /// <param name="logRepository"></param>
+        /// <param name="validationRepository"></param>
         public CreateOrderService(IValidator<CreateOrderDto> validator, ICreateOrderRepository orderRepository,
-            IDomainEventHub<SpecialOrderCreatedEvent> domainEventHub, ILogWritableRepository logRepository)
+            IDomainEventHub<SpecialOrderCreatedEvent> domainEventHub, ILogWritableRepository logRepository,
+            ICreateOrderValidationRepository validationRepository)
         {
             Validator = validator;
             OrderRepository = orderRepository;
             DomainEventHub = domainEventHub;
             LogRepository = logRepository;
+            ValidationRepository = validationRepository;
         }
 
         /// <summary>
@@ -41,9 +45,60 @@ namespace NorthWind.Sales.UseCases.CreateOrder
         /// <param name="order"></param>
         public void RunValidationGuard(CreateOrderDto order)
         {
+            //validar la entrada de datos
             if (!Validator.Validate(order))
             {
                 throw new ValidationException(Validator.Failures);
+            }
+
+            //validar de la base de datos que no tenga un balance pendiente
+            var CurrentBalance = ValidationRepository.GetCurrentBalance(order.CustomerId);
+
+            if (CurrentBalance == null)
+            {
+                throw new ValidationException(
+                    new List<IFailure> { new Failure("Customer", "El identificador de cliente proporcionado no existe")});
+            }
+
+            if (CurrentBalance > 0)
+            {
+                throw new ValidationException(
+                    new List<IFailure> { new Failure("Customer", $"El cliente tiene un adeudo pendiente de {CurrentBalance}")});
+            }
+
+            //validar que haya existencias desde la base de datos
+            var UnitsInStock = ValidationRepository.GetUnitsInStock(
+               order.OrderDetails.Select(d => d.ProductId).ToList());
+
+            var Failures = new List<IFailure>();
+
+            var RequiredQuantities = order.OrderDetails
+                .GroupBy(d => d.ProductId)
+                .Select(d => new KeyValuePair<int, int>(d.First().ProductId,
+                d.Sum(p => p.Quantity))).ToList();
+
+            foreach (var Item in RequiredQuantities)
+            {
+                if (!UnitsInStock.ContainsKey(Item.Key))
+                {
+                    Failures.Add(new Failure(
+                        "Id",
+                        $"El producto {Item.Key} no existe."
+                    ));
+                }
+                else
+                {
+                    if (UnitsInStock[Item.Key] < Item.Value)
+                    {
+                        Failures.Add(new Failure(
+                            "Id",
+                            $"Cantidad ({Item.Value}) no suficiente ({UnitsInStock[Item.Key]}) del producto {Item.Key}."));
+                    }
+                }
+            }
+            if (Failures.Any())
+            {
+                throw new ValidationException(Failures);
             }
         }
 

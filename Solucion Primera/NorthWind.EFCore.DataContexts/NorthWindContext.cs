@@ -29,15 +29,24 @@ namespace NorthWind.EFCore.DataContexts
         /// <summary>
         /// Tabla para logs
         /// </summary>
-        public DbSet<Log> Logs { get; set; }
+        public DbSet<Log> Logs => Set<Log>();
         /// <summary>
         /// Tabla para ordenes
         /// </summary>
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> Orders => Set<Order>();
         /// <summary>
         /// Tabla para detalles de las ordenes
         /// </summary>
-        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderDetail> OrderDetails => Set<OrderDetail>();
+        /// <summary>
+        /// tabla de clientes
+        /// </summary>
+        public DbSet<Customer> Customers => Set<Customer>();
+        /// <summary>
+        /// tabla de productos
+        /// </summary>
+        public DbSet<Product> Products => Set<Product>();
+
 
         /// <summary>
         /// sobre escribir como configurar las tablas al crear los modelos
