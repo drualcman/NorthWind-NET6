@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NorthWind.Entities.POCOEntities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.EFCore.DataContexts
 {
@@ -17,7 +12,7 @@ namespace NorthWind.EFCore.DataContexts
         /// constructor para recibir las opciones de configuracion
         /// </summary>
         /// <param name="options"></param>
-        public NorthWindLogContext(DbContextOptions<NorthWindLogContext> options) 
+        public NorthWindLogContext(DbContextOptions<NorthWindLogContext> options)
             : base(options) { }
 
         /// <summary>

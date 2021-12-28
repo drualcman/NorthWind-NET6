@@ -1,7 +1,5 @@
 ﻿using NorthWind.Sales.IoC;
 using NorthWInd.Sales.WebApi.Endpoints;
-using System.Reflection;
-using WebExceptionHandlerAPI;
 using WebExceptionHandlerAPI.Interfaces;
 using WebExceptionHandlerAPIMiddleWare;
 
@@ -29,9 +27,9 @@ namespace NorthWInd.Sales.WebApi
 
         public static WebApplication ConfigureWebApplication(this WebApplication app)
         {
-            app.UseExceptionHandler(builder => 
+            app.UseExceptionHandler(builder =>
                 builder.UseWebExceptionHandlerPresenter(
-                    app.Environment, 
+                    app.Environment,
                     app.Services.GetService<IWebExceptionPresenter>()));
 
 

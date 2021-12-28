@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/// <summary>
+﻿/// <summary>
 /// Manejar las excepciones personalizadas
 /// </summary>
 namespace NorthWind.Entities.Exceptions
@@ -42,6 +36,6 @@ namespace NorthWind.Entities.Exceptions
         /// </summary>
         /// <param name="title"></param>
         /// <param name="detail"></param>
-        public GeneralException(string title, string detail):base(title)=> Detail = detail;
+        public GeneralException(string title, string detail) : base(title) => Detail = detail;
     }
 }

@@ -1,28 +1,23 @@
 ﻿using NorthWind.Entities.Abstractions;
 using NorthWind.Entities.Interfaces.Validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.Sales.DTOs.CreateOrder
 {
     /// <summary>
     /// Validador para la orden
     /// </summary>
-    public class CreateOrderDetailDtoValidator : 
+    public class CreateOrderDetailDtoValidator :
         ValidatorBase<CreateOrderDetailDto>
-        // visualmente estaria mejor aqui para ver que implementa el IValidator
-        // y quitarlo de la implementacion en la clase base
-        //, IValidator<CreateOrderDetailDto>
+    // visualmente estaria mejor aqui para ver que implementa el IValidator
+    // y quitarlo de la implementacion en la clase base
+    //, IValidator<CreateOrderDetailDto>
     {
 
         /// <summary>
         /// Pasar el servicio de validacion a la clase base
         /// </summary>
         /// <param name="service"></param>
-        public CreateOrderDetailDtoValidator(IValidationService<CreateOrderDetailDto> service) 
+        public CreateOrderDetailDtoValidator(IValidationService<CreateOrderDetailDto> service)
             : base(service)
         {
             AddRuleFor(od => od.ProductId)

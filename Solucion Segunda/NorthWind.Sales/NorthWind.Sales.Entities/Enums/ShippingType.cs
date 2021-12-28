@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NorthWind.Sales.Entities.Enums
+﻿namespace NorthWind.Sales.Entities.Enums
 {
     /// <summary>
     /// Definir los tipos de transporte
@@ -14,15 +8,15 @@ namespace NorthWind.Sales.Entities.Enums
         /// <summary>
         /// Mar 
         /// </summary>
-        Sea, 
+        Sea,
         /// <summary>
         /// Aire
         /// </summary>
-        Air, 
+        Air,
         /// <summary>
         /// Tren
         /// </summary>
-        Rail, 
+        Rail,
         /// <summary>
         /// Caretead
         /// </summary>

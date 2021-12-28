@@ -1,10 +1,5 @@
 ﻿using NorthWind.Entities.Interfaces.Validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.Entities.Abstractions
 {
@@ -44,7 +39,7 @@ namespace NorthWind.Entities.Abstractions
             //pasamos el modelo y devuelve la propiedad
             Expression<Func<T, TProperty>> expression,
             //define si hay que parar en la primera falla
-            bool stopInFirstFailure = true) => 
+            bool stopInFirstFailure = true) =>
             Service.AddRuleFor(expression, stopInFirstFailure);
 
         /// <summary>
@@ -63,7 +58,7 @@ namespace NorthWind.Entities.Abstractions
         /// <param name="validator"></param>
         /// <returns></returns>
         public List<IFailure> SetValidatorFor<ItemsTypes>(IEnumerable<ItemsTypes> items,
-            IValidator<ItemsTypes> validator) => 
+            IValidator<ItemsTypes> validator) =>
             Service.SetValidatorFor(items, validator);
 
         /// <summary>

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/// <summary>
+﻿/// <summary>
 /// DTOs para crear la orden
 /// </summary>
 namespace NorthWind.Sales.DTOs.CreateOrder

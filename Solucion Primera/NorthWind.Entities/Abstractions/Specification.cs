@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace NorthWind.Entities.Abstractions
 {
@@ -17,7 +12,7 @@ namespace NorthWind.Entities.Abstractions
         /// Condicion que vamos a evaluar
         /// </summary>
         public abstract Expression<Func<T, bool>> ConditionExpression { get; }
-        
+
         /// <summary>
         /// Ejecutar la condicion
         /// </summary>

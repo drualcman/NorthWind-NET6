@@ -5,11 +5,6 @@ using NorthWind.Entities.Interfaces.Validation;
 using NorthWind.Sales.DTOs.CreateOrder;
 using NorthWind.Sales.Entities.Agregates;
 using NorthWind.Sales.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.Sales.UseCases.CreateOrder
 {
@@ -87,7 +82,7 @@ namespace NorthWind.Sales.UseCases.CreateOrder
                 // registrar el log
                 LogRepository.Add($"Orden {orderAgregate.Id} ha sido creada");
                 LogRepository.SaveChanges();
-                
+
                 // como se pudo hacer todo se puede finalizar la transaction
                 OrderRepository.SaveChanges();
                 //finalizar transaction

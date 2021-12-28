@@ -17,7 +17,7 @@ namespace WebExceptionHandlerAPIMiddleWare
         /// <param name="includeDetails"></param>
         /// <param name="presenter"></param>
         /// <returns></returns>
-        public static async Task WriteResponse(HttpContext context, 
+        public static async Task WriteResponse(HttpContext context,
             bool includeDetails, IWebExceptionPresenter presenter)
         {
             IExceptionHandlerFeature exceptionDetail = context.Features.Get<IExceptionHandlerFeature>();
@@ -30,7 +30,7 @@ namespace WebExceptionHandlerAPIMiddleWare
                 context.Response.StatusCode = presenter.Content.Status.Value;
                 var stream = context.Response.Body;
                 await JsonSerializer.SerializeAsync(stream, presenter.Content);
-            }            
+            }
         }
     }
 }

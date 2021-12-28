@@ -1,13 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NorthWind.Entities.Interfaces.Events;
-using NorthWind.Entities.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.EFCore.DataContexts
 {
@@ -26,9 +19,9 @@ namespace NorthWind.EFCore.DataContexts
         public static IServiceCollection AddDataContexts(this IServiceCollection services
             , IConfiguration configuration, string connectionStrincName)
         {
-            services.AddDbContext<NorthWindLogContext>(o=>
+            services.AddDbContext<NorthWindLogContext>(o =>
                 o.UseSqlServer(configuration.GetConnectionString(connectionStrincName)));
-            services.AddDbContext<NorthWindOrderContext>(o=>
+            services.AddDbContext<NorthWindOrderContext>(o =>
                 o.UseSqlServer(configuration.GetConnectionString(connectionStrincName)));
             return services;
         }

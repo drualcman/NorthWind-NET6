@@ -2,11 +2,6 @@
 using NorthWind.Sales.DTOs.CreateOrder;
 using NorthWind.Sales.Ports.CreateOrder;
 using NorthWind.Sales.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.Sales.Controllers
 {

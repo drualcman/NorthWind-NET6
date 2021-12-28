@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using WebExceptionHandlerAPI.Interfaces;
 
 namespace WebExceptionHandlerAPI
@@ -37,7 +32,7 @@ namespace WebExceptionHandlerAPI
                 foreach (Type i in handlers)
                 {
                     var exceptionType = i.GetGenericArguments()[0];
-                    ExceptionHandlers.TryAdd(exceptionType, t); 
+                    ExceptionHandlers.TryAdd(exceptionType, t);
                 }
             }
         }
@@ -45,7 +40,7 @@ namespace WebExceptionHandlerAPI
         /// <summary>
         /// Contenido de la excepcion
         /// </summary>
-        public ProblemDetails Content { get; private set; } 
+        public ProblemDetails Content { get; private set; }
 
         /// <summary>
         /// Formatear el contenido para mostrar el problem details desde la excepcion recibida

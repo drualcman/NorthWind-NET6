@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NorthWind.Entities.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.EFCore.DataContexts.Guards
 {
@@ -24,8 +19,8 @@ namespace NorthWind.EFCore.DataContexts.Guards
             }
             catch (DbUpdateException ex)
             {
-                throw new UpdateException(ex.InnerException?.Message ?? ex.Message, 
-                    ex.Entries.Select(e=>e.Entity.GetType().Name).ToList());
+                throw new UpdateException(ex.InnerException?.Message ?? ex.Message,
+                    ex.Entries.Select(e => e.Entity.GetType().Name).ToList());
             }
             catch (Exception ex)
             {

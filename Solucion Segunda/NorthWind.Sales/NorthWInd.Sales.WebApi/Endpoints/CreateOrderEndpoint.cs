@@ -5,7 +5,7 @@ namespace NorthWInd.Sales.WebApi.Endpoints
 {
     public class CreateOrderEndpoint
     {
-        public async Task<IResult> CreateOrder(CreateOrderDto order, 
+        public async Task<IResult> CreateOrder(CreateOrderDto order,
             ICreateOrderController controller)
         {
             var createOrderViewModel = await controller.CreateOrder(order);

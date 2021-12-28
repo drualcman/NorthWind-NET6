@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace SimpleValidationApi
 {
@@ -37,7 +32,7 @@ namespace SimpleValidationApi
         /// <returns></returns>
         public bool Validate(T instance)
         {
-            FailuresFields.Clear(); 
+            FailuresFields.Clear();
             if (Rules.Any())
             {
                 foreach (Rule<T> rule in Rules)
@@ -63,7 +58,7 @@ namespace SimpleValidationApi
         /// <param name="items"></param>
         /// <param name="validator"></param>
         /// <returns></returns>
-        public List<Failure> SetValidatorFor<ItemsType>(IEnumerable<ItemsType> items, 
+        public List<Failure> SetValidatorFor<ItemsType>(IEnumerable<ItemsType> items,
             Validator<ItemsType> validator)
         {
             List<Failure> result = new List<Failure>();

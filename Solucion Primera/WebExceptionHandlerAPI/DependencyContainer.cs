@@ -1,10 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using WebExceptionHandlerAPI.Interfaces;
 
 namespace WebExceptionHandlerAPI
@@ -24,7 +19,7 @@ namespace WebExceptionHandlerAPI
             this IServiceCollection services,
             Assembly exceptionHandlersAssembly)
         {
-            services.AddSingleton<IWebExceptionPresenter>(provicer => 
+            services.AddSingleton<IWebExceptionPresenter>(provicer =>
             new WebExceptionPresenter(exceptionHandlersAssembly));
             return services;
         }

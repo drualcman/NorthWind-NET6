@@ -1,11 +1,6 @@
 ﻿using NorthWind.Entities.Interfaces.Validation;
 using SimpleValidationApi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.ValidationService
 {
@@ -16,19 +11,19 @@ namespace NorthWind.ValidationService
     public class ValidatorWrapper<T> : IValidationService<T>
     {
         readonly Validator<T> ApiValidatorField;
-        
+
         /// <summary>
         /// recibir el validador
         /// </summary>
         public ValidatorWrapper()
         {
-            ApiValidatorField = new Validator<T>(); 
+            ApiValidatorField = new Validator<T>();
         }
 
         /// <summary>
         /// devolver los fallos
         /// </summary>
-        public List<IFailure> Failures => 
+        public List<IFailure> Failures =>
             ApiValidatorField.Failures.Select(
                 f => new Failure(f.PropertyName, f.ErrorMessage))
             .ToList<IFailure>();
@@ -68,7 +63,7 @@ namespace NorthWind.ValidationService
             var serviceValidator = validator.ServiceValidator as ValidatorWrapper<ItemsTypes>;
             var itemsValidatorApi = serviceValidator.ValidatorApi;
             return ApiValidatorField.SetValidatorFor(items, itemsValidatorApi)
-                .Select(f=> (IFailure) new Failure(f.PropertyName, f.ErrorMessage))
+                .Select(f => (IFailure)new Failure(f.PropertyName, f.ErrorMessage))
                 .ToList();
         }
 

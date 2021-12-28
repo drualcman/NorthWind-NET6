@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NorthWind.Entities.Exceptions
+﻿namespace NorthWind.Entities.Exceptions
 {
     /// <summary>
     /// Excepciones de actualizacion
@@ -39,7 +33,7 @@ namespace NorthWind.Entities.Exceptions
         /// </summary>
         /// <param name="message"></param>
         /// <param name="entries"></param>
-        public UpdateException(string message, IReadOnlyList<string> entries):base(message) =>
+        public UpdateException(string message, IReadOnlyList<string> entries) : base(message) =>
             Entries = entries;
     }
 }

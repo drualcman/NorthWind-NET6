@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace SimpleValidationApi
 {
@@ -15,7 +10,7 @@ namespace SimpleValidationApi
         /// <summary>
         /// Validaciones a realizar
         /// </summary>
-        readonly List<ValidationExpression> ValidationExpressions = 
+        readonly List<ValidationExpression> ValidationExpressions =
             new List<ValidationExpression>();
         readonly bool StopOnFirstFailure = false;
         /// <summary>
@@ -46,18 +41,18 @@ namespace SimpleValidationApi
         /// <param name="requirement"></param>
         /// <param name="errorMessage"></param>
         /// <returns></returns>
-        public Rule<T> AddRequirement(Expression<Func<T, bool>> requirement, string errorMessage) 
+        public Rule<T> AddRequirement(Expression<Func<T, bool>> requirement, string errorMessage)
         {
             ValidationExpressions.Add(new ValidationExpression(requirement, errorMessage));
             return this;
         }
-        
+
         /// <summary>
         /// Agregar validadores de collecciones
         /// </summary>
         /// <param name="itemsValidatorExpression"></param>
         /// <returns></returns>
-        public Rule<T> AddCollectionItemsValidator(Expression<Func<T, 
+        public Rule<T> AddCollectionItemsValidator(Expression<Func<T,
             IEnumerable<KeyValuePair<string, string>>>> itemsValidatorExpression)
         {
             ValidationExpressions.Add(
@@ -75,7 +70,7 @@ namespace SimpleValidationApi
             Failures.Clear();
             var enumerator = ValidationExpressions.GetEnumerator();
             bool Continue = true;
-            while(enumerator.MoveNext() && Continue)
+            while (enumerator.MoveNext() && Continue)
             {
                 try
                 {
@@ -93,8 +88,8 @@ namespace SimpleValidationApi
                     else
                     {
                         //ahora validamos una collecion
-                        var validatorExpression = enumerator.Current.Expression as 
-                            Expression<Func<T, IEnumerable<KeyValuePair<string, string>>>>; 
+                        var validatorExpression = enumerator.Current.Expression as
+                            Expression<Func<T, IEnumerable<KeyValuePair<string, string>>>>;
                         var failuresFound = validatorExpression.Compile().Invoke(instance);
                         if (failuresFound.Any())
                         {

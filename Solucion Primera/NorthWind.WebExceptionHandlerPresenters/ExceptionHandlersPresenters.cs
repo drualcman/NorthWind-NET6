@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
 namespace NorthWind.WebExceptionHandlerPresenters
 {
@@ -15,7 +10,7 @@ namespace NorthWind.WebExceptionHandlerPresenters
         /// <summary>
         /// Recoger el aseembly actual para buscar los manejadores de excepion
         /// </summary>
-        public static Assembly Assembly => 
+        public static Assembly Assembly =>
             Assembly.GetExecutingAssembly();
     }
 }

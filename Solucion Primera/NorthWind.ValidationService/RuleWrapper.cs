@@ -1,11 +1,6 @@
 ﻿using NorthWind.Entities.Interfaces.Validation;
 using SimpleValidationApi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NorthWind.ValidationService
 {
@@ -45,9 +40,9 @@ namespace NorthWind.ValidationService
         /// <returns></returns>
         public IRule<T> AddCollectionItemsValidator(Expression<Func<T, IEnumerable<IFailure>>> itemsValidatorExpression)
         {
-            Expression<Func<T, IEnumerable<KeyValuePair<string, string>>>> ItemsValidatorExpression = 
+            Expression<Func<T, IEnumerable<KeyValuePair<string, string>>>> ItemsValidatorExpression =
                 (instance) => itemsValidatorExpression.Compile().Invoke(instance)
-                .Select(s=> new KeyValuePair<string, string>(s.PropertyName, s.ErrorMessage));
+                .Select(s => new KeyValuePair<string, string>(s.PropertyName, s.ErrorMessage));
             Rule.AddCollectionItemsValidator(ItemsValidatorExpression);
             return this;
         }
