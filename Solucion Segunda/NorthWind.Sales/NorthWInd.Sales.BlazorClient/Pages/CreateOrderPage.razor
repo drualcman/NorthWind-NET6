@@ -6,8 +6,7 @@
         <CreateOrder Order=Order />
     </ChildContent>
     <ErrorContent>
-        <ExceptionView Exception=context>
-            <button class="btn btn-danger" @onclick=Recover>OK</button>
-        </ExceptionView>
+        <ExceptionView Exception=context/>
+        <button class="btn btn-danger" @onclick=Recover>OK</button>
     </ErrorContent>
 </ErrorBoundary>
